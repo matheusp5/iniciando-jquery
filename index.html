@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="1">1</h1>
+    <h1 id="2">2</h1>
+    <h1 id="3">3</h1>
+    <button id="button">
+        Esconder/Mostrar
+    </button><br><Br>
+    <a id="link" href="https://youtube.com">YOUTUBE</a>
+    <button id="button2">
+        LINK
+    </button>
+    <input type="text" name="" id="input">
+</body>
+<script src="./jquery.js"></script>
+<script>
+    $("#3").click(() => {
+        $("#3").html("Mudei!")
+        $("#3").addClass("TESTE");
+        $("#3").css('color', 'red');
+    });
+    $("#2").mouseup(() => {
+        $("#2").hide(500);
+    });
+    $("#button").click(() => {
+        $("#2").slideToggle(500);
+    });
+
+
+
+
+    $("#button2").click(() => {
+        $("#link").attr('href', 'https://mxtheuz.com.br');
+        $("#link").html('mxtheuz.com.br');
+    });
+
+
+    $("#input").focusout(() => {
+        if ($("#input").val().length < 5) {
+            alert("Menor que 5");
+        } else {
+            alert($("#input").val());
+        }
+    });
+
+</script>
+</html>
